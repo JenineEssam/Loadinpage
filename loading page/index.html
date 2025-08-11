@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading</title>
+<style>
+  body {
+    margin: 0;
+    background: #fefefa; /* very light background like your image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .pill {
+    width: 30px;
+    height: 15px;
+    border: 2px solid #d9d5c9; /* light beige like in the image */
+    border-radius: 15px;
+    position: relative;
+    animation: spin 1.5s linear infinite;
+  }
+
+  .pill::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #d9d5c9;
+    transform: translateX(-50%);
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+</style>
+</head>
+<body>
+  <div class="pill"></div>
+</body>
+</html>
